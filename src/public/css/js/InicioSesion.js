@@ -15,7 +15,7 @@ function inicio() {
         alert("Incompleto")
     } else {
         if (Correo.value == "admin" && Contrasena.value == "admin") {
-            window.location = "inicioadministrador.html";
+            window.location = "PrincipalEvaluador.html";
             alert("correcto");
             console.log("Usuario: " + user.value);
             console.log("Contraseña: " + pass.value);
@@ -23,7 +23,7 @@ function inicio() {
 
         } else {
             if (Correo.value == "usuario" && Contrasena.value == "usuario") {
-                window.location = "index.html";
+                window.location = "PrincipalUsuario.html";
                 alert("correcto");
                 console.log("Usuario: " + user.value);
                 console.log("Contraseña: " + pass.value);

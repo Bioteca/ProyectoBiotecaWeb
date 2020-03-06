@@ -9,16 +9,16 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Dashboard</title>
+    <title>Subir Archivo</title>
 
     <!-- Custom fonts for this template-->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="../css/sb-admin-2.min.css" rel="stylesheet">
 
 </head>
 
@@ -31,7 +31,8 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Nombre principal -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="inicioadministrador.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center"
+                href="/PrincipalEvaluador/<%= datospersona[0].idpersona%>">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
@@ -43,7 +44,7 @@
 
             <!-- Item inicio -->
             <li class="nav-item active">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="/PrincipalEvaluador/<%= datospersona[0].idpersona%>">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>INICIO</span></a>
             </li>
@@ -52,31 +53,32 @@
             <hr class="sidebar-divider">
 
             <li class="nav-item">
-                <a class="nav-link" href="mispostulacione.html">
+                <a class="nav-link" href="/Postulaciones/<%= datospersona[0].idpersona%>">
                     <i class="fas fa-fw fa-chart-area"></i>
-                    <span>MIS POSTULACIONES</span></a>
+                    <span>POSTULACIONES</span></a>
             </li>
             <!-- Division -->
             <hr class="sidebar-divider">
 
 
+
             <!-- item libros -->
             <li class="nav-item">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="/PrincipalEvaluador/<%= datospersona[0].idpersona%>">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>LIBROS</span></a>
             </li>
 
             <!-- item revistas -->
             <li class="nav-item">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="/PrincipalEvaluador/<%= datospersona[0].idpersona%>">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>REVISTAS</span></a>
             </li>
 
             <!-- item articulos-->
             <li class="nav-item">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="/PrincipalEvaluador/<%= datospersona[0].idpersona%>">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>ARTÍCULOS</span></a>
             </li>
@@ -90,13 +92,14 @@
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="index.html">Animales</a>
-                        <a class="collapse-item" href="index.html">Plantas</a>
-                        <a class="collapse-item" href="index.html">Botánica</a>
-                        <a class="collapse-item" href="index.html">Zoología</a>
-                        <a class="collapse-item" href="index.html">Ecología</a>
-                        <a class="collapse-item" href="index.html">Conservación</a>
-                        <a class="collapse-item" href="index.html">Genética</a>
+                        <a class="collapse-item" href="/PrincipalEvaluador/<%= datospersona[0].idpersona%>">Animales</a>
+                        <a class="collapse-item" href="/PrincipalEvaluador/<%= datospersona[0].idpersona%>">Plantas</a>
+                        <a class="collapse-item" href="/PrincipalEvaluador/<%= datospersona[0].idpersona%>">Botánica</a>
+                        <a class="collapse-item" href="/PrincipalEvaluador/<%= datospersona[0].idpersona%>">Zoología</a>
+                        <a class="collapse-item" href="/PrincipalEvaluador/<%= datospersona[0].idpersona%>">Ecología</a>
+                        <a class="collapse-item"
+                            href="/PrincipalEvaluador/<%= datospersona[0].idpersona%>">Conservación</a>
+                        <a class="collapse-item" href="/PrincipalEvaluador/<%= datospersona[0].idpersona%>">Genética</a>
                     </div>
                 </div>
             </li>
@@ -124,8 +127,8 @@
                     <!-- panel de postular y usuario -->
                     <ul class="navbar-nav ml-auto">
 
-                        <a href="postular.html" class="row2">
-                            <button type="button" class="btn btn-primary btn-lg">postular</button>
+                        <a href="/subirarchivo/<%= datospersona[0].idpersona%>" class="row2">
+                            <button type="button" class="btn btn-primary btn-lg">Subir archivo</button>
                         </a>
 
                         <div class="topbar-divider d-none d-sm-block"></div>
@@ -134,7 +137,8 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Nombre usuario</span>
+                                <span
+                                    class="mr-2 d-none d-lg-inline text-gray-600 small"><%= datospersona[0].nombres%></span>
                                 <img class="img-profile rounded-circle"
                                     src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
                             </a>
@@ -142,10 +146,6 @@
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Perfil
-                                </a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -161,59 +161,70 @@
 
             </div>
 
-            <div class="row">
+            <div>
+                <form method="POST" action="/subirDocumento/<%= datospersona[0].idpersona%>">
+                    <div class="row2">
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail4">Título*</label>
+                            <input type="text" class="form-control form-control-user" id="Titulo" name="titulo"
+                                value="">
 
-                <!-- Content Column -->
-                <div class="col-lg-6 mb-4">
-                    <center>
-                        <!-- Contenedor documento -->
-                        <div class="container-fluid">
+                            <br><label for="inputEmail4">Descripción*</label></br>
+                            <input type="text" class="form-control form-control-user" id="Descripcion" value=""
+                                name="descripcion">
 
-                            <div class="row">
-
-                                <div class="col-lg-10 mb-15">
-                                    <div class="card shadow mb-4">
-                                        <div class="card-body">
-                                            <div>
-                                                <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
-                                                    src="https://biodiversidadsah.files.wordpress.com/2011/04/biologia.jpg"
-                                                    alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                            <div class="card-footer py-3">
-                                <button type="button" class="btn btn-outline-info">Visualizar</button>
-                                <button type="button" class="btn btn-outline-info">Descargar</button>
-                            </div>
                         </div>
-                    </center>
-                </div>
-
-                <div class="col-lg-6 mb-4">
-                    <div class="row">
-                        <!-- Page Heading -->
-                        <div>
-                            <h1 class="h1 mb-0 text-gray-800">Título documento</h1>
+                        <div class="form-group col-md-6">
+                            <label for="inputPassword4">Fecha Publicacion*</label>
+                            <input type="date" class="form-control form-control-user" placeholder="Fecha Publicacion"
+                                id="FechaPublicacion" name="fecha">
                             <br>
-                            <h4 class="h4 mb-0 text-gray-800">Autor</h4></br>
+                            <select class="custom-select custom-select-sm" id="Categorias" name="categoria">
+                                <option selected>Categoría</option>
+                                <option value="1">Animales</option>
+                                <option value="2">Plantas</option>
+                                <option value="3">Botánica</option>
+                                <option value="4">Zoología</option>
+                                <option value="5">Ecología</option>
+                                <option value="6">Conservación</option>
+                                <option value="7">Genética</option>
+                                <option value="8">Amazonia Colombiana</option>
+                            </select>
+                            </br>
                             <br>
-                            <h4 class="h4 mb-0 text-gray-800">Descripción</h4></br>
+                            <select class="custom-select custom-select-sm" id="Tipos" name="tipo">
+                                <option selected>Tipo de documento</option>
+                                <option value="1">Libro</option>
+                                <option value="2">Artículo</option>
+                                <option value="3">Revista</option>
+                            </select>
+                            </br>
                         </div>
 
                     </div>
+                    <div>
+                        <center>
+                            <button id="Postular" type="submit" class="btn btn-primary">Subir archivo</button>
+                        </center>
+                    </div>
+                    <h1></h1>
+                </form>
+
+                <div class="row3">
+                    <form>
+                        <div class="form-group">
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="customFileLang" lang="es">
+                                <label class="custom-file-label" for="customFileLang">Seleccionar Archivo</label>
+                            </div>
+                        </div>
+                    </form>
                 </div>
+
             </div>
 
         </div>
-        <!-- End of Main Content -->
 
-        <!-- Footer -->
-
-        <!-- End of Footer -->
 
     </div>
     <footer class="sticky-footer bg-white">
@@ -236,32 +247,31 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Desea cerrar sesion?</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+                    <a class="btn btn-primary" href="/login">Salir</a>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../css/vendor/jquery/jquery.min.js"></script>
+    <script src="../css/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="../css/vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
 
     <!-- Page level plugins -->
-    <script src="vendor/chart.js/Chart.min.js"></script>
+    <script src="../css/vendor/chart.js/Chart.min.js"></script>
 
     <!-- Page level custom scripts -->
     <script src="js/demo/chart-area-demo.js"></script>

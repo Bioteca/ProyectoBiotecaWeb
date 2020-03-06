@@ -12,13 +12,13 @@
     <title>SB Admin 2 - Dashboard</title>
 
     <!-- Custom fonts for this template-->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="../css/sb-admin-2.min.css" rel="stylesheet">
 
 </head>
 
@@ -31,7 +31,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Nombre principal -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="inicioadministrador.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/PrincipalEvaluador/<%= datospersona[0].idpersona%>">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
@@ -43,7 +43,7 @@
 
             <!-- Item inicio -->
             <li class="nav-item active">
-                <a class="nav-link" href="inicioadministrador.html">
+                <a class="nav-link" href="/PrincipalEvaluador/<%= datospersona[0].idpersona%>">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>INICIO</span></a>
             </li>
@@ -52,7 +52,7 @@
             <hr class="sidebar-divider">
 
             <li class="nav-item">
-                <a class="nav-link" href="inicioadministrador.html">
+                <a class="nav-link" href="/Postulaciones/<%= datospersona[0].idpersona%>">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>POSTULACIONES</span></a>
             </li>
@@ -60,24 +60,23 @@
             <hr class="sidebar-divider">
 
 
-
             <!-- item libros -->
             <li class="nav-item">
-                <a class="nav-link" href="inicioadministrador.html">
+                <a class="nav-link" href="/PrincipalEvaluador/<%= datospersona[0].idpersona%>">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>LIBROS</span></a>
             </li>
 
             <!-- item revistas -->
             <li class="nav-item">
-                <a class="nav-link" href="inicioadministrador.html">
+                <a class="nav-link" href="/PrincipalEvaluador/<%= datospersona[0].idpersona%>">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>REVISTAS</span></a>
             </li>
 
             <!-- item articulos-->
             <li class="nav-item">
-                <a class="nav-link" href="inicioadministrador.html">
+                <a class="nav-link" href="/PrincipalEvaluador/<%= datospersona[0].idpersona%>">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>ARTÍCULOS</span></a>
             </li>
@@ -91,13 +90,13 @@
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="inicioadministrador.html">Animales</a>
-                        <a class="collapse-item" href="inicioadministrador.html">Plantas</a>
-                        <a class="collapse-item" href="inicioadministrador.html">Botánica</a>
-                        <a class="collapse-item" href="inicioadministrador.html">Zoología</a>
-                        <a class="collapse-item" href="inicioadministrador.html">Ecología</a>
-                        <a class="collapse-item" href="inicioadministrador.html">Conservación</a>
-                        <a class="collapse-item" href="inicioadministrador.html">Genética</a>
+                        <a class="collapse-item" href="/PrincipalEvaluador/<%= datospersona[0].idpersona%>">Animales</a>
+                        <a class="collapse-item" href="/PrincipalEvaluador/<%= datospersona[0].idpersona%>">Plantas</a>
+                        <a class="collapse-item" href="/PrincipalEvaluador/<%= datospersona[0].idpersona%>">Botánica</a>
+                        <a class="collapse-item" href="/PrincipalEvaluador/<%= datospersona[0].idpersona%>">Zoología</a>
+                        <a class="collapse-item" href="/PrincipalEvaluador/<%= datospersona[0].idpersona%>">Ecología</a>
+                        <a class="collapse-item" href="/PrincipalEvaluador/<%= datospersona[0].idpersona%>">Conservación</a>
+                        <a class="collapse-item" href="/PrincipalEvaluador/<%= datospersona[0].idpersona%>">Genética</a>
                     </div>
                 </div>
             </li>
@@ -121,11 +120,10 @@
                 <!-- Topbar -->
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
-
                     <!-- panel de postular y usuario -->
                     <ul class="navbar-nav ml-auto">
 
-                        <a href="subirarchivo.html" class="row2">
+                        <a href="/subirarchivo/<%= datospersona[0].idpersona%>" class="row2">
                             <button type="button" class="btn btn-primary btn-lg">Subir archivo</button>
                         </a>
 
@@ -135,7 +133,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Nombre usuario</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><%=datospersona[0].nombres%></span>
                                 <img class="img-profile rounded-circle"
                                     src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
                             </a>
@@ -143,10 +141,6 @@
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Perfil
-                                </a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -162,64 +156,59 @@
 
             </div>
 
-            <div>
-                <div class="row2">
-                    <div class="form-group col-md-6">
-                        <label for="inputEmail4">Título*</label>
-                        <input type="text" class="form-control" placeholder="Título">
+            <div class="row">
 
-                        <br><label for="inputEmail4">Descripción*</label></br>
-                        <input type="text" class="form-control" placeholder="Descripción">
+                <!-- Content Column -->
+                <div class="col-lg-6 mb-4">
+                    <center>
+                        <!-- Contenedor documento -->
+                        <div class="container-fluid">
 
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="inputPassword4">Autor*</label>
-                        <input type="text" class="form-control" placeholder="Autor">
-                        <br>
-                        <select class="custom-select custom-select-sm">
-                            <option selected>Categoría</option>
-                            <option value="1">Animales</option>
-                            <option value="2">Plantas</option>
-                            <option value="3">Botánica</option>
-                            <option value="3">Zoología</option>
-                            <option value="3">Ecología</option>
-                            <option value="3">Conservación</option>
-                            <option value="3">Genética</option>
-                        </select>
-                        </br>
-                        <br>
-                        <select class="custom-select custom-select-sm">
-                            <option selected>Tipo de documento</option>
-                            <option value="1">Libro</option>
-                            <option value="2">Artículo</option>
-                            <option value="3">Revista</option>
-                        </select>
-                        </br>
-                    </div>
-                </div>
+                            <div class="row">
 
-                <div class="row3">
+                                <div class="col-lg-10 mb-15">
+                                    <div class="card shadow mb-4">
+                                        <div class="card-body">
+                                            <div>
+                                                <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
+                                                    src="https://biodiversidadsah.files.wordpress.com/2011/04/biologia.jpg"
+                                                    alt="">
+                                            </div>
+                                        </div>
+                                    </div>
 
-                    <form>
-                        <div class="form-group">
-                            <div class="custom-file">
-                                <input type="file" class="custom-file-input" id="customFileLang" lang="es">
-                                <label class="custom-file-label" for="customFileLang">Seleccionar Archivo</label>
+                                </div>
+
+                            </div>
+                            <div class="card-footer py-3">
+                                <button type="button" class="btn btn-outline-info">Visualizar</button>
+                                <button type="button" class="btn btn-outline-info">Descargar</button>
                             </div>
                         </div>
-                        <div>
-                            <center>
-                                <button class="btn btn-primary">Subir archivo</button>
-                            </center>
-                        </div>
-
-                    </form>
+                    </center>
                 </div>
 
+                <div class="col-lg-6 mb-4">
+                    <div class="row">
+                        <!-- Page Heading -->
+                        <div>
+                            <h1 class="h1 mb-0 text-gray-800">Título documento</h1>
+                            <br>
+                            <h4 class="h4 mb-0 text-gray-800">Autor</h4></br>
+                            <br>
+                            <h4 class="h4 mb-0 text-gray-800">Descripción</h4></br>
+                        </div>
+
+                    </div>
+                </div>
             </div>
 
         </div>
+        <!-- End of Main Content -->
 
+        <!-- Footer -->
+
+        <!-- End of Footer -->
 
     </div>
     <footer class="sticky-footer bg-white">
@@ -238,36 +227,35 @@
 
     <!-- Logout Modal-->
     <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
-                </div>
-            </div>
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Desea cerrar sesion?</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
         </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+          <a class="btn btn-primary" href="/login">Salir</a>
+        </div>
+      </div>
     </div>
+  </div>
 
     <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../css/vendor/jquery/jquery.min.js"></script>
+    <script src="../css/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="../css/vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
 
     <!-- Page level plugins -->
-    <script src="vendor/chart.js/Chart.min.js"></script>
+    <script src="../css/vendor/chart.js/Chart.min.js"></script>
 
     <!-- Page level custom scripts -->
     <script src="js/demo/chart-area-demo.js"></script>

@@ -21,6 +21,7 @@ var Tipos = document.getElementById('Tipos');
 
 var idPostulaciones = "";
 var Postular = document.getElementById('Postular');
+
 var MiPostulacion = document.getElementById('MiPostulacion');
 
 function PostularDocumento() {
